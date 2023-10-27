@@ -9,6 +9,11 @@ public class Question1 {
     /*
     Recebe uma lista de longs, incrementa 1 nos valores e retorna um flux dos resultados
      */
-    public Flux<Long> inc(final List<Long> numbers){}
+    public Flux<Long> inc(final List<Long> numbers){
+        Flux<Long> list = Flux.fromIterable(numbers)
+                .map(n -> n + 1);
+        return list;
+
+    }
 
 }
